@@ -12,7 +12,7 @@ def read_file(filename):
 	return problem_numbers, operations
 
 
-def count_fresh(problem_numbers, operations):
+def compute_grand_total(problem_numbers, operations):
 	grand_total = 0
 	for problem_index in range(len(problem_numbers[0])):
 		if operations[problem_index] == "+":
@@ -31,7 +31,7 @@ def count_fresh(problem_numbers, operations):
 
 def main():
 	problem_numbers, operations = read_file("input.txt")
-	result = count_fresh(problem_numbers, operations)
+	result = compute_grand_total(problem_numbers, operations)
 	print(result)
 
 if __name__ == "__main__":
